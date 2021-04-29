@@ -7,3 +7,23 @@
 
      #+RESULTS:
 
+    Prepare the words that will be used by the spelling tests.
+**** Clean initial database
+     This is done using stimpool which was developed for this project.
+***** Get word pool
+      This extracts the base word for each word by removing the suffix indicators.
+     #+begin_src python :exports both :session words :results output
+       word_pool = WordPool()
+       print(word_pool.words.size)
+       print(word_pool.words.head())
+     #+end_src
+
+     #+RESULTS:
+     : 55457
+     : 0           abs
+     : 1          adsl
+     : 2        adolfo
+     : 3        adrián
+     : 4    afganistán
+     : Name: words, dtype: object
+
