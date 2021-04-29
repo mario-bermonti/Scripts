@@ -46,3 +46,22 @@
       : 5    aguilar
       : 6      aitor
       : Name: words, dtype: object
+
+***** Select words of more than 1 letter
+      Just in case there are any
+
+      #+begin_src python :exports both :session words :results output
+        word_pool.select_words_of_length(min_len=2)
+        print(word_pool.words.size)
+        print(word_pool.words.head())
+      #+end_src
+
+      #+RESULTS:
+      : 46794
+      : 0        abs
+      : 1       adsl
+      : 2     adolfo
+      : 5    aguilar
+      : 6      aitor
+      : Name: words, dtype: object
+
