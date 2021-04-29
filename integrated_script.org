@@ -1,0 +1,9 @@
+* Prepare stimuli
+** Spelling tests
+*** Prepare words
+     #+begin_src python :exports both :session words :results output
+       from stimpool.words import WordPool
+     #+end_src
+
+     #+RESULTS:
+
