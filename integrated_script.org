@@ -27,3 +27,22 @@
      : 4    afganistán
      : Name: words, dtype: object
 
+***** Select words without accented characters
+      We don't want words that have accented characters because that adds a layer of complexity
+      to spelling tasks because requires participants to press commands in order to type these
+      characters.
+
+      #+begin_src python :exports both :session words :results output
+        word_pool.select_words_without_accented_characters()
+        print(word_pool.words.size)
+        print(word_pool.words.head())
+      #+end_src
+
+      #+RESULTS:
+      : 46801
+      : 0        abs
+      : 1       adsl
+      : 2     adolfo
+      : 5    aguilar
+      : 6      aitor
+      : Name: words, dtype: object
