@@ -65,3 +65,22 @@
       : 6      aitor
       : Name: words, dtype: object
 
+***** Select a sample of 5,000 words
+      This is sample will be analyzed in detail and then a subset will be selected.
+
+      This sample was selected in a way that it is reproducible.
+
+      #+begin_src python :exports both :session words :results output
+        word_pool_sample = word_pool.sample_pool(n=5000)
+        print(word_pool_sample.size)
+        print(word_pool_sample.head())
+      #+end_src
+
+      #+RESULTS:
+      : 5000
+      : 6215     atestiguar
+      : 40259    penalmente
+      : 6817        azoemia
+      : 11728        chitar
+      : 31861        ladero
+      : Name: words, dtype: object
