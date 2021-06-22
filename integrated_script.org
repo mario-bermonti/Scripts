@@ -1,4 +1,15 @@
 * Prepare stimuli
+#+begin_src python :exports none :session words
+  from pathlib import Path
+  path_root = Path()
+  path_words = path_root / ".." / "Instruments" / "Words" / "cleaned"
+  path_words
+
+  #+end_src
+
+  #+RESULTS:
+  : ../Instruments/Words/cleaned
+
 ** Spelling tests
 *** Prepare words
      #+begin_src python :exports both :session words :results output
