@@ -95,8 +95,6 @@
         word_pool_sample = word_pool.sample_pool(n=5000)
         print(word_pool_sample.size)
         print(word_pool_sample.head())
-        path_word_pool_sample_5000 = path_words / "words_pool_sample_5000"
-        word_pool.save_pool(path_word_pool_sample_5000)
       #+end_src
 
       #+RESULTS:
@@ -141,7 +139,10 @@
       [5000 rows x 5 columns]
       #+end_example
 
-
+***** Save analyzed words to file (5,000)
+       #+begin_src python :exports both :session words :results output
+         path_word_pool_analyzed_n_5000 = path_words / "words_analyzed_n_5000.csv"
+         word_pool_analyzed.to_csv(path_word_pool_analyzed_n_5000, index=False)
        #+end_src
 
        #+RESULTS:
