@@ -100,3 +100,11 @@
       : 11728        chitar
       : 31861        ladero
       : Name: words, dtype: object
+
+**** Word difficulty
+***** Analyze word difficulty
+      #+begin_src python :exports both :session words :results output
+        from wdiff.analyzer import Analyzer
+      #+end_src
+
+      #+RESULTS:
