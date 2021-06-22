@@ -141,37 +141,29 @@
       [5000 rows x 5 columns]
       #+end_example
 
-      #+begin_src python :exports both :session words :results output
-        path_word_pool_analyzed_n_5000 = path_words / "words_analyzed_n_5000.csv"
-        word_pool_analyzed.to_csv(path_word_pool_analyzed_n_5000, index=False)
-      #+end_src
+***** Sample 500 words for final word pool
+       #+begin_src python :exports both :session words
+         word_pool_analyzed_sample = word_pool_analyzed.sample(500, random_state=1)
+         path_word_pool_analyzed_sample_500 = path_words / "words_analyzed_sample_500.csv"
+         word_pool_analyzed_sample.to_csv(path_word_pool_analyzed_sample_500, index=False)
+         word_pool_analyzed_sample
 
-      #+RESULTS:
+       #+end_src
 
+       #+RESULTS:
+       #+begin_example
+                    text  length  silent_letters  shared_phonemes  total_difficulty
+       2764     jubiloso       8               0                3                11
+       4767    tempestar       9               0                1                10
+       3814    ajustador       9               0                2                11
+       3499        estoy       5               0                1                 6
+       2735  conceptismo      11               0                3                14
+       ...           ...     ...             ...              ...               ...
+       623     remolinar       9               0                0                 9
+       1840     colicuar       8               0                2                10
+       1885        bromo       5               0                1                 6
+       4580      empalar       7               0                0                 7
+       2048   bienquerer      10               1                2                13
 
-# ***** Sample 500 words for final word pool (NOT USED)
-#        #+begin_src python :exports both :session words
-#          word_pool_analyzed_sample = word_pool_analyzed.sample(500, random_state=1)
-#          path_word_pool_analyzed_sample_500 = path_words / "words_analyzed_sample_500.csv"
-#          word_pool_analyzed_sample.to_csv(path_word_pool_analyzed_sample_500, index=False)
-#          word_pool_analyzed_sample
-
-#        #+end_src
-
-#        #+RESULTS:
-#        #+begin_example
-#                     text  length  silent_letters  shared_phonemes  total_difficulty
-#        2764     jubiloso       8               0                3                11
-#        4767    tempestar       9               0                1                10
-#        3814    ajustador       9               0                2                11
-#        3499        estoy       5               0                1                 6
-#        2735  conceptismo      11               0                3                14
-#        ...           ...     ...             ...              ...               ...
-#        623     remolinar       9               0                0                 9
-#        1840     colicuar       8               0                2                10
-#        1885        bromo       5               0                1                 6
-#        4580      empalar       7               0                0                 7
-#        2048   bienquerer      10               1                2                13
-
-#        [500 rows x 5 columns]
-#        #+end_example
+       [500 rows x 5 columns]
+       #+end_example
