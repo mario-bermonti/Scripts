@@ -12,15 +12,16 @@
 
 ** Spelling tests
 *** Prepare words
+    Prepare the words that will be used by the spelling tests.
+**** Clean initial database
+     This is done using stimpool which was developed for this project.
+
      #+begin_src python :exports both :session words :results output
        from stimpool.words import WordPool
      #+end_src
 
      #+RESULTS:
 
-    Prepare the words that will be used by the spelling tests.
-**** Clean initial database
-     This is done using stimpool which was developed for this project.
 ***** Get word pool
       This extracts the base word for each word by removing the suffix indicators.
      #+begin_src python :exports both :session words :results output
