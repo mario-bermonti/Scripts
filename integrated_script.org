@@ -66,6 +66,8 @@
         word_pool.select_words_of_length(min_len=2)
         print(word_pool.words.size)
         print(word_pool.words.head())
+        path_word_pool_initial = path_words / "words_pool_initial"
+        word_pool.save_pool(path_word_pool_initial)
       #+end_src
 
       #+RESULTS:
@@ -86,6 +88,8 @@
         word_pool_sample = word_pool.sample_pool(n=5000)
         print(word_pool_sample.size)
         print(word_pool_sample.head())
+        path_word_pool_sample_5000 = path_words / "words_pool_sample_5000"
+        word_pool.save_pool(path_word_pool_sample_5000)
       #+end_src
 
       #+RESULTS:
