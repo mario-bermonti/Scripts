@@ -106,6 +106,14 @@
       : 31861        ladero
       : Name: words, dtype: object
 
+***** Save the sample of words to file (5,000)
+       #+begin_src python :exports both :session words :results output
+         path_word_pool_n_5000 = path_words / "2-words_sample_n_5000.csv"
+         word_pool_sample.to_csv(path_word_pool_n_5000, index=False, header=True)
+       #+end_src
+
+       #+RESULTS:
+
 **** Word difficulty
 ***** Analyze word difficulty
       #+begin_src python :exports both :session words :results output
@@ -138,14 +146,6 @@
 
       [5000 rows x 5 columns]
       #+end_example
-
-***** Save analyzed words to file (5,000)
-       #+begin_src python :exports both :session words :results output
-         path_word_pool_analyzed_n_5000 = path_words / "2-words_analyzed_n_5000.csv"
-         word_pool_analyzed.to_csv(path_word_pool_analyzed_n_5000, index=False)
-       #+end_src
-
-       #+RESULTS:
 
 
  # ***** Sample 500 words for final word pool (NOT USED)
