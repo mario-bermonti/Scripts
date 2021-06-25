@@ -107,6 +107,14 @@
       : Name: words, dtype: object
 
 ***** Save the sample of words to file (5,000)
+      These words will be reviewed to eliminate the ones that are inappropriate.
+      Unappropriated words are words that meet any of the following criteria:
+      - sexual content
+      - negative content
+      - vulgar content or otherwise not appropriate for children
+      - words not used in Puerto Rico
+      - Content that does not represent words (e.g., ABS)
+
        #+begin_src python :exports both :session words :results output
          path_word_pool_n_5000 = path_words / "2-words_sample_n_5000.csv"
          word_pool_sample.to_csv(path_word_pool_n_5000, index=False, header=True)
