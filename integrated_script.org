@@ -155,6 +155,78 @@
       [5000 rows x 5 columns]
       #+end_example
 
+**** Sample words that will be used (24 words)
+     #+begin_src python :exports none :session words :results silent
+       import pandas as pd
+       import matplotlib as plt
+     #+end_src
+
+     These words have to be sampled guaranteeing that there are words of all
+     characteristics analyzed with wdiff.
+
+     An equal distrib for each subcategory is not guaranteed. What is guaranteed
+     is that there is at least 4 words from each subcategory (i.e., meeting the
+     sub-criteria).
+
+     #+begin_src python :exports both :session words :results output
+       word_pool_analyzed_sample = pd.DataFrame()
+
+       categories_and_cutoffs = [
+           ("length", 5),
+           ("silent_letters", 1),
+           ("shared_phonemes", 1),
+       ]
+       for category_and_cutoff in categories_and_cutoffs:
+           # preparation
+           cat = category_and_cutoff[0]
+           cutoff = category_and_cutoff[1]
+           data_for_cat = word_pool_analyzed[cat]
+
+           # divide into subcats
+           does_not_have_characteristic = word_pool_analyzed[data_for_cat < cutoff]
+           has_characteristic = word_pool_analyzed[data_for_cat >= cutoff]
+
+           # sample from each
+           does_not_have_characteristic_sample = does_not_have_characteristic.sample(4, random_state=1)
+           has_characteristic_sample = has_characteristic.sample(4, random_state=1)
+
+           # integrate subcategories
+           integrated_sample = pd.concat([does_not_have_characteristic_sample, has_characteristic_sample])
+
+           # integrate into master
+           word_pool_analyzed_sample = pd.concat([integrated_sample, word_pool_analyzed_sample])
+
+       print(word_pool_analyzed_sample)
+     #+end_src
+
+     #+RESULTS:
+     #+begin_example
+                       text  length  silent_letters  shared_phonemes  total_difficulty
+     2644          maronita       8               0                0                 8
+     4779      enfadamiento      12               0                0                12
+     2306            tramar       6               0                0                 6
+     2591               erg       3               0                0                 3
+     1028           augusto       7               0                1                 8
+     3454       escondidijo      11               0                3                14
+     485      diferenciador      13               0                1                14
+     1358        prenunciar      10               0                1                11
+     3068        sobrinazgo      10               0                3                13
+     927            caterva       7               0                2                 9
+     2453           rebufar       7               0                1                 8
+     822              barca       5               0                2                 7
+     2427         machaqueo       9               1                1                11
+     276          halagador       9               1                0                10
+     1146         contrahaz       9               1                2                12
+     4903        zigzaguear      10               1                2                13
+     2228              aria       4               0                0                 4
+     2639              ente       4               0                0                 4
+     3799              tuna       4               0                0                 4
+     1258              cero       4               0                1                 5
+     3178            tejero       6               0                1                 7
+     2671  desgraciadamente      16               0                2                18
+     2447          herbazal       8               1                2                11
+     1040        contumelia      10               0                1                11
+     #+end_example
 
  # ***** Sample 500 words for final word pool (NOT USED)
  #        #+begin_src python :exports both :session words
