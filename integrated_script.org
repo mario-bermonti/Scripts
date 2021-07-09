@@ -177,11 +177,6 @@
       #+RESULTS:
 
 **** Sample words that will be used (24 words)
-     #+begin_src python :exports none :session words :results silent
-       import pandas as pd
-       import matplotlib as plt
-     #+end_src
-
      These words have to be sampled guaranteeing that there are words of all
      characteristics analyzed with wdiff.
 
@@ -225,57 +220,4 @@
      #+end_src
 
      #+RESULTS:
-     #+begin_example
-                       text  length  silent_letters  shared_phonemes  total_difficulty
-     2644          maronita       8               0                0                 8
-     4779      enfadamiento      12               0                0                12
-     2306            tramar       6               0                0                 6
-     2591               erg       3               0                0                 3
-     1028           augusto       7               0                1                 8
-     3454       escondidijo      11               0                3                14
-     485      diferenciador      13               0                1                14
-     1358        prenunciar      10               0                1                11
-     3068        sobrinazgo      10               0                3                13
-     927            caterva       7               0                2                 9
-     2453           rebufar       7               0                1                 8
-     822              barca       5               0                2                 7
-     2427         machaqueo       9               1                1                11
-     276          halagador       9               1                0                10
-     1146         contrahaz       9               1                2                12
-     4903        zigzaguear      10               1                2                13
-     2228              aria       4               0                0                 4
-     2639              ente       4               0                0                 4
-     3799              tuna       4               0                0                 4
-     1258              cero       4               0                1                 5
-     3178            tejero       6               0                1                 7
-     2671  desgraciadamente      16               0                2                18
-     2447          herbazal       8               1                2                11
-     1040        contumelia      10               0                1                11
-     #+end_example
 
- # ***** Sample 500 words for final word pool (NOT USED)
- #        #+begin_src python :exports both :session words
- #          word_pool_analyzed_sample = word_pool_analyzed.sample(500, random_state=1)
- #          path_word_pool_analyzed_sample_500 = path_words / "words_analyzed_sample_500.csv"
- #          word_pool_analyzed_sample.to_csv(path_word_pool_analyzed_sample_500, index=False)
- #          word_pool_analyzed_sample
-
- #        #+end_src
-
- #        #+RESULTS:
- #        #+begin_example
- #                     text  length  silent_letters  shared_phonemes  total_difficulty
- #        2764     jubiloso       8               0                3                11
- #        4767    tempestar       9               0                1                10
- #        3814    ajustador       9               0                2                11
- #        3499        estoy       5               0                1                 6
- #        2735  conceptismo      11               0                3                14
- #        ...           ...     ...             ...              ...               ...
- #        623     remolinar       9               0                0                 9
- #        1840     colicuar       8               0                2                10
- #        1885        bromo       5               0                1                 6
- #        4580      empalar       7               0                0                 7
- #        2048   bienquerer      10               1                2                13
-
- #        [500 rows x 5 columns]
- #        #+end_example
