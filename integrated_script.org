@@ -114,7 +114,6 @@
       : Name: words, dtype: object
 
 ***** Save the sample of words to file (5,000)
-      These words will be reviewed to eliminate the ones that are inappropriate.
       Unappropriated words are words that meet any of the following criteria:
       - sexual content
       - negative content
