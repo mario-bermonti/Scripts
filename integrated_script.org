@@ -120,6 +120,11 @@
        #+end_src
 
        #+RESULTS:
+
+***** Clean pool based on meaning
+      This step was done manually by the PI and 2 RAs.
+
+      The words were reviewed to eliminate the ones that are inappropriate.
       Unappropriated words are words that meet any of the following criteria:
       - sexual content
       - negative content
@@ -127,8 +132,17 @@
       - words not used in Puerto Rico
       - Content that does not represent words (e.g., ABS)
 
+      The process:
+      - The initial word pool was copied to the file [[file:~/Ponce Health Sciences University/Project TEST - General/Instruments/Words/cleaned/3-words_analyzed_cleaned_meaning.xlsx][3a-words_analyzed_cleaned_meaning.xlsx]]
+      - RAs reviewed half of the word pool and double checked the half reviewed by their
+        partner. The words identified as words that should be removed were moved to the file
+        [[file:~/Ponce Health Sciences University/Project TEST - General/Instruments/Words/cleaned/3-words removed.xlsx][3b-words removed.xlsx]].
+      - The PI and the 2 RAs reviewed and discussed the words that were moved to the file
+        [[file:~/Ponce Health Sciences University/Project TEST - General/Instruments/Words/cleaned/3-words removed.xlsx][3b-words removed.xlsx]] and identified words that should be kept. We reached a
+        consensus for all words.
+      - We conducted a final review of the words to be kept and the words to be
+        removed. The RAs reviewed the words first and then the PI.
 
-       #+RESULTS:
 
 **** Word difficulty
 ***** Analyze word difficulty
