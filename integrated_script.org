@@ -217,6 +217,10 @@
            # integrate into master
            word_pool_analyzed_sample = pd.concat([integrated_sample, word_pool_analyzed_sample])
 
+
+       word_pool_analyzed_sample.sort_values("total_difficulty", inplace=True)
+       path_word_pool_analyzed_sample = path_words / "4-words_final.csv"
+       word_pool_analyzed_sample.to_csv(path_word_pool_analyzed_sample, index=False)
        print(word_pool_analyzed_sample)
      #+end_src
 
