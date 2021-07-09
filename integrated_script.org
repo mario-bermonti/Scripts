@@ -142,7 +142,22 @@
         consensus for all words.
       - We conducted a final review of the words to be kept and the words to be
         removed. The RAs reviewed the words first and then the PI.
+***** Read and clean words
+      Because words were manually cleaned based on meaning, we read the words again.
+      Because I spotted some duplicates in the words when reviewing them, we will
+      clean them eliminating to duplicates.
 
+      #+begin_src python :exports both :session words :results output
+        path_words_cleaned_meaning_with_duplicates = path_words / "3-words_analyzed_cleaned_meaning.csv"
+        words_cleaned_meaning_with_duplicates = pd.read_csv(path_words_cleaned_meaning, squeeze=True)
+        words_cleaned_meaning = words_cleaned_meaning_with_duplicates.drop_duplicates()
+      #+end_src
+
+      #+RESULTS:
+
+      The initial word pool was 5,000 words and after cleaning the words based on
+      their meaning, we were able to keep
+      src_python[:session words]{words_cleaned_meaning.size} {{{results(=2040=)}}} words.
 
 **** Word difficulty
 ***** Analyze word difficulty
