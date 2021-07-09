@@ -1,4 +1,11 @@
 * Prepare stimuli
+** Run code general to all blocks
+  #+begin_src python :exports none :session words :results output
+  import pandas as pd
+  #+end_src
+
+  #+RESULTS:
+
 #+begin_src python :exports none :session words
   from pathlib import Path
   path_root = Path()
