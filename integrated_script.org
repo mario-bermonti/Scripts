@@ -167,30 +167,14 @@
 
       #+RESULTS:
 
-      #+begin_src python :exports both :session words
-        analyzer = Analyzer(word_pool_sample)
+      #+begin_src python :exports both :session words :results output
+        analyzer = Analyzer(words_cleaned_meaning)
         analyzer.run_all_analyses()
         word_pool_analyzed = analyzer.results
-        word_pool_analyzed
+        print(word_pool_analyzed.head())
       #+end_src
 
       #+RESULTS:
-      #+begin_example
-                   text  length  silent_letters  shared_phonemes  total_difficulty
-      0      atestiguar      10               0                1                11
-      1      penalmente      10               0                0                10
-      2         azoemia       7               0                1                 8
-      3          chitar       6               0                0                 6
-      4          ladero       6               0                0                 6
-      ...           ...     ...             ...              ...               ...
-      4995      racista       7               0                2                 9
-      4996      triscar       7               0                2                 9
-      4997    capadocio       9               0                2                11
-      4998   encanallar      10               0                2                12
-      4999  zampabollos      11               0                4                15
-
-      [5000 rows x 5 columns]
-      #+end_example
 
 **** Sample words that will be used (24 words)
      #+begin_src python :exports none :session words :results silent
